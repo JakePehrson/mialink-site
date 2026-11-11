@@ -163,12 +163,32 @@ async function notify(env, message) {
   }
 }
 
-async function handleContact(request, env) {
-  const url = new URL(request.url);
-  if (request.method !== 'POST') return json({ error: 'Method not allowed.' }, 405);
-
+// The pages may be served from GitHub Pages on another origin, so requests from
+// an explicit allowlist are accepted, and answered with CORS headers.
+function allowedOrigin(request, env) {
   const origin = request.headers.get('origin');
-  if (origin && origin !== url.origin) return json({ error: 'Forbidden.' }, 403);
+  if (!origin) return null;
+  if (origin === new URL(request.url).origin) return origin;
+  const list = (env.ALLOWED_ORIGINS || '')
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean);
+  return list.includes(origin) ? origin : null;
+}
+
+function withCors(response, origin) {
+  if (!origin) return response;
+  const headers = new Headers(response.headers);
+  headers.set('access-control-allow-origin', origin);
+  headers.set('vary', 'Origin');
+  headers.set('access-control-allow-methods', 'POST, GET, OPTIONS');
+  headers.set('access-control-allow-headers', 'content-type, x-contact-token');
+  headers.set('access-control-max-age', '600');
+  return new Response(response.body, { status: response.status, headers });
+}
+
+async function handleContact(request, env) {
+  if (request.method !== 'POST') return json({ error: 'Method not allowed.' }, 405);
 
   let body;
   try {
@@ -252,8 +272,20 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === '/api/contact') return handleContact(request, env);
-    if (url.pathname === '/api/messages') return handleMessages(request, env);
+    if (url.pathname.startsWith('/api/')) {
+      const origin = allowedOrigin(request, env);
+      if (request.headers.get('origin') && !origin) return json({ error: 'Forbidden.' }, 403);
+      if (request.method === 'OPTIONS') return withCors(new Response(null, { status: 204 }), origin);
+
+      const response =
+        url.pathname === '/api/contact'
+          ? await handleContact(request, env)
+          : url.pathname === '/api/messages'
+            ? await handleMessages(request, env)
+            : json({ error: 'Not found.' }, 404);
+
+      return withCors(response, origin);
+    }
 
     const response = await env.ASSETS.fetch(request);
     if (response.status === 404) {

@@ -1,4 +1,5 @@
 .freebuff/
+allowed-origins.txt
 contact-token.txt
 dist/
 mail-from.txt

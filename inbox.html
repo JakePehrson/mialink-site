@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Message inbox — Mialink Software LLC</title>
 <meta name="robots" content="noindex, nofollow">
+<meta name="mialink-api" content="https://site-815908cd9f0444d49cb2abbf60bc2dcc.freebuff.page">
 <link rel="icon" href="assets/img/mialink-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
@@ -33,6 +34,7 @@
 <script>
 (function () {
   'use strict';
+  var meta = document.querySelector('meta[name="mialink-api"]');
   var form = document.getElementById('inbox-form');
   var status = document.getElementById('inbox-status');
   var list = document.getElementById('inbox-list');
@@ -51,7 +53,7 @@
     status.className = 'form-status';
     list.innerHTML = '';
 
-    fetch('/api/messages', { headers: { 'x-contact-token': token } })
+    fetch((meta && meta.content ? meta.content.replace(/\/+$/, '') : '') + '/api/messages', { headers: { 'x-contact-token': token } })
       .then(function (response) {
         return response.json().catch(function () { return {}; }).then(function (data) {
           return { ok: response.ok, data: data };

@@ -9,6 +9,11 @@
   var submit = document.getElementById('contact-submit');
   var topic = document.getElementById('topic');
 
+  // The form can be served from another host than the API, so the endpoint is
+  // declared in the page; without the tag it posts to the same origin.
+  var apiMeta = document.querySelector('meta[name="mialink-api"]');
+  var apiBase = apiMeta && apiMeta.content ? apiMeta.content.replace(/\/+$/, '') : '';
+
   // Preselect a topic when a product page links here, e.g. contact.html?topic=mia-beta
   var wanted = new URLSearchParams(window.location.search).get('topic');
   if (topic && wanted) {
@@ -47,7 +52,7 @@
     submit.textContent = 'Sending…';
     setStatus('Sending your message…', null);
 
-    fetch('/api/contact', {
+    fetch(apiBase + '/api/contact', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload)

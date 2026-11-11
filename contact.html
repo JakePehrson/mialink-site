@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Mialink Software LLC</title>
+<meta name="description" content="Contact Mialink Software LLC about a project, Mia Blend Studio beta access, Field Notes Companion or a privacy question. A short form, no account needed.">
+<meta name="theme-color" content="#01998a">
+<meta property="og:title" content="Contact Mialink Software LLC">
+<meta property="og:description" content="Project enquiries, beta access and privacy questions — one short form.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/mialink-lockup.svg">
+<link rel="icon" href="assets/img/mialink-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Mialink home">
+      <img src="assets/img/mialink-mark.svg" alt="" width="38" height="38">
+      <span class="brand-name">mialink</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="index.html#products">Products</a>
+      <a href="index.html#services">What we build</a>
+      <a href="index.html#about">About</a>
+      <a class="nav-cta" href="contact.html" aria-current="page">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="contact-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a><span>/</span>Contact</p>
+      <p class="eyebrow">Contact</p>
+      <h1>Send us a message</h1>
+      <p class="lede">A project enquiry, a question about one of the products, or a privacy request — all of it comes to the same short form. No account, no mailing list, and no address to copy out of the page.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-layout">
+      <form class="contact-form" id="contact-form" method="post" action="/api/contact" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" maxlength="200" required>
+          <p class="field-hint">Used to reply to this message. Nothing else.</p>
+        </div>
+
+        <div class="field">
+          <label for="topic">What is this about?</label>
+          <select id="topic" name="topic">
+            <option value="general">A general question</option>
+            <option value="project">A project enquiry</option>
+            <option value="mia-beta">Mia Blend Studio beta access</option>
+            <option value="field-notes">Field Notes Companion</option>
+            <option value="medication-tracker">Medication Tracker</option>
+            <option value="privacy">Privacy or a data request</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="8" maxlength="4000" required></textarea>
+          <p class="field-hint">For beta access, tell us which device you use — iPhone or Android.</p>
+        </div>
+
+        <div class="field-honeypot" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="btn-row" style="margin-top:1.4rem">
+          <button class="btn btn-primary" type="submit" id="contact-submit">Send message</button>
+        </div>
+
+        <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact-aside">
+        <div class="note-box">
+          <h4>What happens next</h4>
+          <p>Your message is stored on our server and read by us. We keep your name, address and message so we can reply, and we do not use any of it for anything else.</p>
+        </div>
+        <div class="note-box">
+          <h4>Beta access</h4>
+          <p>Mia Blend Studio and Medication Tracker are in private beta, so there is no public download yet. Send the form and we will reply when there is a place for you.</p>
+        </div>
+        <div class="note-box">
+          <h4>Privacy questions</h4>
+          <p>Choose the privacy topic, or read the <a href="privacy.html">privacy policy</a> first. It covers the website and all three products, including what each app stores and where.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/mialink-mark.svg" alt="" width="40" height="40">
+          <span>mialink</span>
+        </div>
+        <p style="margin:0;max-width:22rem">Mialink Software LLC builds websites, mobile apps and browser extensions.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="medication-tracker.html">Medication Tracker</a></li>
+          <li><a href="mia-blend-studio.html">Mia Blend Studio</a></li>
+          <li><a href="field-notes.html">Field Notes Companion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">What we build</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact form</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Mialink Software LLC. All rights reserved.</span>
+      <span>Made by Mialink in the United States.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field Notes Companion — private notes on any web app</title>
+<meta name="description" content="Pin hover-to-read notes to fields on any web application. Notes stay in your browser, never in the app's records. Backup, or sync through your own Google Drive.">
+<meta name="theme-color" content="#01998a">
+<meta property="og:title" content="Field Notes Companion">
+<meta property="og:description" content="A private note layer for the web apps you have to use. Hover to read, click to edit, keep it in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/field-notes.svg">
+<link rel="icon" href="assets/img/mialink-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Mialink home">
+      <img src="assets/img/mialink-mark.svg" alt="" width="38" height="38">
+      <span class="brand-name">mialink</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="index.html#products" aria-current="page">Products</a>
+      <a href="index.html#services">What we build</a>
+      <a href="index.html#about">About</a>
+      <a class="nav-cta" href="contact.html">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="product-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a><span>/</span><a href="index.html#products">Products</a><span>/</span>Field Notes Companion</p>
+      <div class="product-hero-inner">
+        <img class="app-icon-lg" src="assets/img/field-notes.svg" alt="Field Notes Companion icon" width="132" height="132">
+        <div>
+          <p class="eyebrow">Mialink Software LLC · Chrome and Edge</p>
+          <h1>Field Notes Companion</h1>
+          <p class="tagline">Field notes that live where the work happens. Pin notes to the fields, columns and labels of any web application — hover to read, click to edit. Your notes stay in your browser, never in the app's records.</p>
+          <div class="chips">
+            <span class="pill pill-tint">Chromium extension</span>
+            <span class="pill">Stored in your browser</span>
+            <span class="pill">JSON backup</span>
+            <span class="pill">Optional Drive sync</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html?topic=field-notes">Ask about the extension</a>
+            <a class="btn btn-ghost" href="#storage">How notes are stored</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="note-box reveal">
+        <h4>About this release</h4>
+        <p>Field Notes Companion 1.5.0 runs on Chrome and Edge for Windows, macOS and Linux. Store listings are being prepared; until they are live, this page and the <a href="privacy.html">privacy policy</a> are the reference for what the extension does and how it handles your notes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Features</p>
+        <h2>Notes that attach to meaning, not to pixels</h2>
+        <p class="lede">Most annotation tools mark a spot on a screen. Field Notes Companion attaches to the thing itself — a field's id, a label's target, a column header's text — and finds it again on every page load.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">01</span> Annotate anything with a label</h3>
+          <p>Field labels, column headers, section legends, plain text. If the page names it, you can pin a note to it — and the marker is re-resolved against the live page, so a note written next to "Renewal date" is still there after the app ships an update.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">02</span> Hover to read, click to edit</h3>
+          <p>A small marker sits beside each annotated element. Hovering opens the note after a delay you set, from half a second to thirty seconds, and long notes open into a wider layout instead of a cramped tooltip.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">03</span> Notes the app never sees</h3>
+          <p>Everything is kept in your browser's extension storage. Nothing is written into the application, so you cannot corrupt a record, break a form, or leave a note where a colleague will read it over your shoulder.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">04</span> Rich notes, not just text</h3>
+          <p>Bold, italic, underline, highlights, text colour, bulleted and numbered lists, links, and note, warning and example callout blocks.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">05</span> Scoped the way you need</h3>
+          <p>By default a note follows the exact page you wrote it on, with long IDs and GUIDs in the address normalised so the same screen still matches. Turn on <em>Ignore URL and match on screen</em> and the note follows you across every account, ticket or order.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">06</span> Make it invisible, or make it loud</h3>
+          <p>Choose the marker shape, its colour, the note background, a size from 8 to 22 pixels and an opacity, and override any of it per note. If you make them too faint to find, one button resets every marker to its defaults.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">07</span> Backups you actually own</h3>
+          <p>Export a dated JSON file, then restore with a merge or a clean replace. A reminder nudges you every 14 days by default, and you can change the interval or silence it.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">08</span> Deletions that stay deleted</h3>
+          <p>Deleting a note records a tombstone with a timestamp. That is what stops a sync bringing back a note you removed on another machine, or an old backup quietly resurrecting everything you have deleted since.</p>
+        </article>
+      </div>
+
+      <div class="split" style="margin-top:3rem">
+        <div class="reveal">
+          <h3 style="margin-bottom:0.6rem">Also in the extension</h3>
+          <ul class="check-list reveal" style="grid-template-columns:1fr;margin-top:0.6rem">
+            <li><span><strong>Ctrl+Shift+Y</strong> starts a note without touching the toolbar</span></li>
+            <li>A floating toolbar you can drag out of the way, which remembers where you left it</li>
+            <li>One toggle that hides every marker and note, for screenshots or a shared screen</li>
+            <li>Named note sets for production, staging or a client's environment</li>
+            <li>Import someone else's export into a set of its own, without touching yours</li>
+          </ul>
+        </div>
+        <div class="split-panel reveal">
+          <h3 style="margin-bottom:0.8rem">Markers hide themselves</h3>
+          <p>If the target is not on screen — a tab you have not opened, a collapsed section, a field hidden by permissions — the marker is simply not drawn. No orphaned markers floating over empty space.</p>
+          <p style="margin-top:0.9rem">Notes are only ever read to the extent needed to find the element they are anchored to and draw the marker. There is no model, no summarising and no suggestion engine behind any of this.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Screens</p>
+        <h2>What it looks like in a working app</h2>
+        <p class="lede">Screenshots are being captured for the store listings. Until they land here, the two views below are the ones worth showing.</p>
+      </div>
+      <div class="shot-grid two reveal">
+        <div class="shot">
+          <div class="shot-frame wide"><span>Screenshot placeholder<br>Marker beside a field, note open</span></div>
+          <p class="shot-cap">A note on a live page<small>Marker beside a field label; hover opens the note without leaving the page</small></p>
+        </div>
+        <div class="shot">
+          <div class="shot-frame wide"><span>Screenshot placeholder<br>Backup and note sets</span></div>
+          <p class="shot-cap">Backup and note sets<small>Dated JSON export, restore options and named sets</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="storage">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow">Storage</p>
+          <h2>In your browser, or in your own Drive</h2>
+          <p class="lede" style="margin-top:1rem">There is no account with us, because there is no service to sign into. Notes live in your browser's extension storage. If you want two machines in step, the extension can write one file to your own Google Drive — after you turn that on and sign in.</p>
+          <p style="margin-top:1rem">Drive sync uses the <code>drive.file</code> scope, which lets the extension see only the single file it created. It cannot read, list or modify anything else in your Drive.</p>
+        </div>
+        <div class="split-panel reveal">
+          <h3 style="margin-bottom:1rem">How sync behaves</h3>
+          <ul class="value-list">
+            <li>
+              <span class="bullet" aria-hidden="true">1</span>
+              <div>
+                <strong>Manual sync shows a preview</strong>
+                <p>How many notes are coming in, how many changes, deletions and conflicts, before anything is written.</p>
+              </div>
+            </li>
+            <li>
+              <span class="bullet" aria-hidden="true">2</span>
+              <div>
+                <strong>Background sync stops at a conflict</strong>
+                <p>It checks on the interval you set, and when two versions disagree it pauses and asks instead of picking a winner.</p>
+              </div>
+            </li>
+            <li>
+              <span class="bullet" aria-hidden="true">3</span>
+              <div>
+                <strong>Conflicts are reviewed side by side</strong>
+                <p>One at a time, with your choice of which version wins, and nothing silently resolved.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Honest limits</p>
+        <h2>What it is not</h2>
+        <p class="lede">Worth saying plainly, because it decides whether this is the right tool for the way you work.</p>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="note-box warn reveal">
+          <h4>Desktop Chromium only</h4>
+          <p>Chrome and Edge on Windows, macOS and Linux. There is no mobile browser support and no Safari or Firefox build.</p>
+        </div>
+        <div class="note-box warn reveal">
+          <h4>Not a collaboration tool</h4>
+          <p>No real-time sharing, no comments and no team workspace. You share notes by exporting a set and sending the file.</p>
+        </div>
+        <div class="note-box warn reveal">
+          <h4>It needs something to anchor to</h4>
+          <p>If an app draws its interface into a canvas or hides everything inside a shadow DOM, there may be no field id, label or header for a note to attach to.</p>
+        </div>
+        <div class="note-box warn reveal">
+          <h4>Sync is file-based, and notes are not encrypted</h4>
+          <p>Sync moves notes between machines through your Drive; it is not a live connection. Notes are stored unencrypted in browser extension storage and in the Drive file, protected by your OS account and your Google account respectively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-mint">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Private by default</h2>
+        <p>No account, no telemetry, no servers of ours. Uninstall the extension and its local data goes with it; delete the Drive file and the synced copy is gone.</p>
+        <div class="btn-row">
+          <a class="btn btn-on-dark" href="privacy.html">Read the privacy policy</a>
+          <a class="btn btn-ghost" href="contact.html?topic=field-notes">Send us a message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">More from Mialink</p>
+        <h2>Other things we make</h2>
+      </div>
+      <div class="card-grid cols-2">
+        <article class="product-card reveal">
+          <img class="app-icon" src="assets/img/mialink-med-app.svg" alt="Medication Tracker app icon" width="62" height="62">
+          <p class="kicker">Android · iOS in preparation</p>
+          <h3>Medication Tracker</h3>
+          <p>Medications, reminders, weight and inventory in one place.</p>
+          <div class="card-foot" style="margin-top:1.2rem">
+            <a class="text-link" href="medication-tracker.html">View product</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <img class="app-icon" src="assets/img/mia-blend-studio-app.svg" alt="Mia Blend Studio app icon" width="62" height="62">
+          <p class="kicker">iOS and Android · beta</p>
+          <h3>Mia Blend Studio</h3>
+          <p>A blend calculator and record-keeping app for essential oil blends.</p>
+          <div class="card-foot" style="margin-top:1.2rem">
+            <a class="text-link" href="mia-blend-studio.html">View product</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/mialink-mark.svg" alt="" width="40" height="40">
+          <span>mialink</span>
+        </div>
+        <p style="margin:0;max-width:22rem">Mialink Software LLC builds websites, mobile apps and browser extensions.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="medication-tracker.html">Medication Tracker</a></li>
+          <li><a href="mia-blend-studio.html">Mia Blend Studio</a></li>
+          <li><a href="field-notes.html">Field Notes Companion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">What we build</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact form</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>Field Notes Companion is a Mialink Software LLC browser extension. It does not collect analytics or send your notes to us, and it is not affiliated with or endorsed by any of the applications you use it on.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Mialink Software LLC. All rights reserved.</span>
+      <span>Made by Mialink in the United States.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

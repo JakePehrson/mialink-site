@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Message inbox — Mialink Software LLC</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/mialink-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<main class="section" id="main">
+  <div class="container" style="max-width:56rem">
+    <p class="eyebrow">Private</p>
+    <h1 style="margin-bottom:0.8rem">Contact form inbox</h1>
+    <p class="lede" style="margin-bottom:2rem">This page is not linked from the site and is not indexed. Paste the access token that was given to you to read the last 100 messages.</p>
+
+    <form id="inbox-form" class="contact-form" style="margin-bottom:2.4rem">
+      <div class="field">
+        <label for="token">Access token</label>
+        <input id="token" name="token" type="password" autocomplete="off" required>
+      </div>
+      <div class="btn-row" style="margin-top:1rem">
+        <button class="btn btn-primary" type="submit">Load messages</button>
+      </div>
+      <p class="form-status" id="inbox-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div id="inbox-list"></div>
+  </div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var form = document.getElementById('inbox-form');
+  var status = document.getElementById('inbox-status');
+  var list = document.getElementById('inbox-list');
+
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var token = form.token.value.trim();
+    if (!token) return;
+    status.textContent = 'Loading…';
+    status.className = 'form-status';
+    list.innerHTML = '';
+
+    fetch('/api/messages', { headers: { 'x-contact-token': token } })
+      .then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (data) {
+          return { ok: response.ok, data: data };
+        });
+      })
+      .then(function (result) {
+        if (!result.ok) {
+          status.textContent = result.data.error || 'Could not load messages.';
+          status.className = 'form-status is-error';
+          return;
+        }
+        var messages = result.data.messages || [];
+        if (!messages.length) {
+          status.textContent = 'No messages yet.';
+          status.className = 'form-status';
+          return;
+        }
+        status.textContent = messages.length + ' message' + (messages.length === 1 ? '' : 's') + '.';
+        status.className = 'form-status is-success';
+        list.innerHTML = messages.map(function (m) {
+          return '<article class="note-box" style="margin-bottom:1.2rem">' +
+            '<h4 style="margin-bottom:0.2rem">' + esc(m.name) + ' — <a href="mailto:' + esc(m.email) + '">' + esc(m.email) + '</a></h4>' +
+            '<p class="kicker" style="margin-bottom:0.8rem">' + esc(new Date(m.created_at).toLocaleString()) + ' · ' + esc(m.topic) + '</p>' +
+            '<p style="white-space:pre-wrap;margin:0">' + esc(m.message) + '</p>' +
+            '</article>';
+        }).join('');
+      })
+      .catch(function () {
+        status.textContent = 'Could not load messages.';
+        status.className = 'form-status is-error';
+      });
+  });
+})();
+</script>
+</body>
+</html>

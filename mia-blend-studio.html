@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mia Blend Studio — a blend calculator by Mialink</title>
+<meta name="description" content="Mia Blend Studio is a blend calculator and record-keeping app for people who make their own essential oil blends. Exact arithmetic, carrier calculated, everything stored on your device.">
+<meta name="theme-color" content="#01998a">
+<meta property="og:title" content="Mia Blend Studio">
+<meta property="og:description" content="A blend calculator and record-keeping app for people who make their own essential oil blends.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/mia-blend-studio-app.svg">
+<link rel="icon" href="assets/img/mialink-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Mialink home">
+      <img src="assets/img/mialink-mark.svg" alt="" width="38" height="38">
+      <span class="brand-name">mialink</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="index.html#products" aria-current="page">Products</a>
+      <a href="index.html#services">What we build</a>
+      <a href="index.html#about">About</a>
+      <a class="nav-cta" href="contact.html">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="product-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a><span>/</span><a href="index.html#products">Products</a><span>/</span>Mia Blend Studio</p>
+      <div class="product-hero-inner">
+        <img class="app-icon-lg" src="assets/img/mia-blend-studio-app.svg" alt="Mia Blend Studio app icon" width="132" height="132">
+        <div>
+          <p class="eyebrow">Mialink Software LLC · Private beta</p>
+          <h1>Mia Blend Studio</h1>
+          <p class="tagline">A blend calculator and record-keeping app for people who make their own essential oil blends. Pick what you are making, enter your materials, and see the exact amounts — with every assumption it made shown.</p>
+          <div class="chips">
+            <span class="pill pill-tint">iOS and Android</span>
+            <span class="pill">On your device</span>
+            <span class="pill">No account</span>
+            <span class="pill">JSON backup</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html?topic=mia-beta">Join the beta</a>
+            <a class="btn btn-ghost" href="#calculates">What it calculates</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="note-box reveal">
+        <h4>About this release</h4>
+        <p>Mia Blend Studio is in private beta, version 0.1.0 Beta 1, for iOS and Android. There is no public store listing, no account system and no purchase — beta access is arranged directly. Platform features are described as they work today, and anything planned is labelled as planned.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" id="calculates">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What it calculates</p>
+        <h2>The arithmetic is the feature</h2>
+        <p class="lede">A blend is a small calculation with a lot of ways to get it wrong. Mia Blend Studio picks a measurement basis from the product type, keeps the books in exact fractions, and tells you what it assumed.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">01</span> Nine product types</h3>
+          <p>Diffuser, roller bottle, massage oil, lotion, soap, perfume, room spray, candle, or custom. Each one brings its own measurement basis and its own expectation about whether a carrier is used.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">02</span> Four ways to enter a material</h3>
+          <p>Percent, drops, millilitres or grams — narrowed to the units that make sense for the product type, because a lotion is weighed and a diffuser is measured by volume.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">03</span> The carrier is calculated, not guessed</h3>
+          <p>The base is the batch size minus the actives. If the remainder would be negative, the app shows an error instead of quietly clamping it to zero and handing you a formula that does not add up.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">04</span> Exact arithmetic</h3>
+          <p>Values are stored as exact fractions rather than floating-point numbers, so 33.3 + 33.3 + 33.4 behaves predictably. Rounding happens for display only, and any rounding difference is stated.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">05</span> Drops are your assumption</h3>
+          <p>Drop counts convert using your own drops-per-millilitre setting — 20 by default, editable. The app labels that number as an assumption, not a physical constant, because dropper size, oil and temperature all change it.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">06</span> Volume and mass stay apart</h3>
+          <p>A millilitre-to-gram conversion stays unavailable until you supply a density, and the app explains why the field is disabled. Normalise to 100% is a deliberate action behind a confirmation, never something that happens on its own.</p>
+        </article>
+      </div>
+
+      <div class="stat-grid reveal" style="margin-top:2.2rem">
+        <div class="stat"><b>128</b><span>materials in the catalog · 115 essential oils</span></div>
+        <div class="stat"><b>18</b><span>starter formulas across diffusers, rollers and massage oils</span></div>
+        <div class="stat"><b>9</b><span>product types, each with its own basis</span></div>
+        <div class="stat"><b>0</b><span>accounts needed, and no network calls in normal use</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Screens</p>
+        <h2>What you are looking at</h2>
+        <p class="lede">Screenshots from the app are being prepared for this page. Until they are here, these are the four screens the app is built around.</p>
+      </div>
+      <div class="shot-grid reveal">
+        <div class="shot">
+          <div class="shot-frame"><span>App screenshot placeholder<br>Create a blend</span></div>
+          <p class="shot-cap">Create<small>Product type, batch size and materials</small></p>
+        </div>
+        <div class="shot">
+          <div class="shot-frame"><span>App screenshot placeholder<br>Blend detail with totals</span></div>
+          <p class="shot-cap">Blend detail<small>Totals, carrier remainder and assumptions</small></p>
+        </div>
+        <div class="shot">
+          <div class="shot-frame"><span>App screenshot placeholder<br>Discover</span></div>
+          <p class="shot-cap">Discover<small>Starter formulas with cautions</small></p>
+        </div>
+        <div class="shot">
+          <div class="shot-frame"><span>App screenshot placeholder<br>Inventory</span></div>
+          <p class="shot-cap">Inventory<small>Lots, low stock and what you can make</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Saving and stock</p>
+        <h2>From a formula you worked out to a shelf you can see</h2>
+        <p class="lede">Blends, the materials they use and the stock on the shelf are one system, so what you can make is answered from your real inventory rather than your memory.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">07</span> My Blends</h3>
+          <p>Search and filter saved blends, mark favourites, duplicate, edit or delete with a confirmation. Unsaved changes are protected when you leave the editor, and recent blends sit on the Create screen for a one-tap return.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">08</span> Blend history</h3>
+          <p>Each save increments the revision and keeps a snapshot, so you can look back at the version of a formula you mixed last month instead of relying on memory or a note in your phone.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">09</span> Inventory as lots</h3>
+          <p>Materials are tracked as lots with a quantity, a unit and dates. Expired lots are excluded from availability rather than being consumed without a word. Set a low-stock threshold per material and get a shopping list of what to buy.</p>
+        </article>
+
+        <article class="feature reveal">
+          <h3><span class="feature-mark" aria-hidden="true">10</span> “What can I make?”</h3>
+          <p>Every saved blend is checked against current stock and marked <em>Ready</em> or <em>Short N materials</em>, using the same calculation engine as the editor so the two cannot disagree. Deducting stock shows exactly which lots will be drawn down, and the last 50 deductions can each be undone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow">Your data</p>
+          <h2>It stays on your device</h2>
+          <p class="lede" style="margin-top:1rem">Mia Blend Studio keeps everything on your device. There is no account, no server and no sync, so there is nowhere for your blends to be sent and nothing to sign into when you want to use it.</p>
+          <ul class="check-list reveal" style="margin-top:1.6rem">
+            <li>No account, no analytics, no ads</li>
+            <li>No network calls during normal use</li>
+            <li>Backups are JSON files you export and keep yourself</li>
+            <li>Invalid backup files are rejected whole, not half-imported</li>
+            <li>A recovery copy is written before any restore</li>
+            <li>Diagnostics export carries version, build, platform, counts and schema — no blend content</li>
+          </ul>
+        </div>
+        <div class="split-panel reveal">
+          <h3 style="margin-bottom:1rem">Small things that count</h3>
+          <ul class="value-list">
+            <li>
+              <span class="bullet" aria-hidden="true">◐</span>
+              <div>
+                <strong>Light and dark, four accents</strong>
+                <p>Teal, blue, plum or amber, on either theme, with unit preferences for mL or fl oz and g or oz.</p>
+              </div>
+            </li>
+            <li>
+              <span class="bullet" aria-hidden="true">Aa</span>
+              <div>
+                <strong>Contrast checked, motion respected</strong>
+                <p>Text contrast verified at 4.5:1 or better by an automated check, reduced-motion honoured, and controls that carry screen-reader labels and roles.</p>
+              </div>
+            </li>
+            <li>
+              <span class="bullet" aria-hidden="true">5</span>
+              <div>
+                <strong>The free plan holds five blends</strong>
+                <p>At the cap you can still read, edit and export everything you already saved — only adding a new blend is blocked. Premium is not purchasable in the beta.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Limits, stated plainly</p>
+        <h2>What it deliberately does not do</h2>
+        <p class="lede">A blend is not safe because its percentages add up to 100%. The app is a calculation and record-keeping tool, and it says so in the product rather than only in the footer.</p>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="note-box warn reveal">
+          <h4>No numeric safety limits</h4>
+          <p>Mia Blend Studio does not supply maximum dilutions, dosing guidance or IFRA compliance values. None were sourced, so none are shown — and it is not medical, dermatological, veterinary or regulatory advice.</p>
+        </div>
+        <div class="note-box warn reveal">
+          <h4>Starter formulas are starters</h4>
+          <p>All 18 formulas are marked as not editorially checked or safety assessed, in the app itself. Treat them as a starting point, not a recommendation. Cautions shown alongside a formula come from the material catalog, not from a safety review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-mint">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Request beta access</h2>
+        <p>Mia Blend Studio is in private beta on iOS and Android. Tell us which platform you use and what you blend, and we will send the build details and the current safety notice.</p>
+        <div class="btn-row">
+          <a class="btn btn-on-dark" href="contact.html?topic=mia-beta">Ask about beta access</a>
+          <a class="btn btn-ghost" href="privacy.html">How your data is handled</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">More from Mialink</p>
+        <h2>Other things we make</h2>
+      </div>
+      <div class="card-grid cols-2">
+        <article class="product-card reveal">
+          <img class="app-icon" src="assets/img/mialink-med-app.svg" alt="Medication Tracker app icon" width="62" height="62">
+          <p class="kicker">Android · iOS in preparation</p>
+          <h3>Medication Tracker</h3>
+          <p>Medications, reminders, weight and inventory in one place.</p>
+          <div class="card-foot" style="margin-top:1.2rem">
+            <a class="text-link" href="medication-tracker.html">View product</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <img class="app-icon" src="assets/img/field-notes.svg" alt="Field Notes Companion icon" width="62" height="62">
+          <p class="kicker">Chrome and Edge</p>
+          <h3>Field Notes Companion</h3>
+          <p>Private notes pinned to the fields of any web app.</p>
+          <div class="card-foot" style="margin-top:1.2rem">
+            <a class="text-link" href="field-notes.html">View product</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/mialink-mark.svg" alt="" width="40" height="40">
+          <span>mialink</span>
+        </div>
+        <p style="margin:0;max-width:22rem">Mialink Software LLC builds websites, mobile apps and browser extensions.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="medication-tracker.html">Medication Tracker</a></li>
+          <li><a href="mia-blend-studio.html">Mia Blend Studio</a></li>
+          <li><a href="field-notes.html">Field Notes Companion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">What we build</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact form</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>Mia Blend Studio is a calculation and record-keeping tool. It does not supply numeric safety limits, maximum dilutions or IFRA compliance values, and it is not medical, dermatological, veterinary or regulatory advice.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Mialink Software LLC. All rights reserved.</span>
+      <span>Made by Mialink in the United States.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
